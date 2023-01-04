@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Exercise</title>
+    <script>
+        const shopList = [
+            'Burger Premium:65000',
+            'Burger Cheese:45000',
+            'Burger Chicken:30000'
+        ];
+        console.log(shopList);
+
+        let total = 0;
+
+        for (const iterator of shopList) {
+            // console.log(iterator);
+            const separateItem = iterator.split(':');
+            console.log(separateItem);
+            // console.log(separateItem[0]); // Access the first Element
+            // console.log(separateItem[1]); // Access the Second Element
+            const itemName = separateItem[0];
+            const priceItem = separateItem[1];
+            const printItemandPrice = `${itemName} - ${priceItem}`;
+            console.log(printItemandPrice);
+            const strToNum = Number(priceItem);
+            // console.log(strToNum);
+            total = total + strToNum;
+            
+        }
+        console.log(`The Total Price : ${total}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

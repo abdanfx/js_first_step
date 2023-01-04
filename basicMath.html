@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basic Math</title>
+</head>
+<body>
+    <script>
+        const myInt = 5;
+        const myFloat = 6.667;
+        const sixDecimal = myFloat.toFixed();
+        console.log(typeof myInt);
+        console.log(typeof myFloat);
+        console.log(sixDecimal);
+
+        const firstValue = '1';
+        const numConverter = Number(firstValue);
+        const secondValue = 2;
+        const result = numConverter + secondValue;
+        console.log(numConverter + ' + ' + secondValue + ' = ' + result);
+
+        let x = 5;
+        console.log(x);
+        // const y = x++;
+        // console.log(y);
+        const ySecond = --x;
+        console.log(ySecond);
+
+        let a = 1;
+        a += 5;
+        console.log(a);
+
+        function f(num1, num2) {
+            const result = num1 + num2;
+            return result;
+        }
+
+        console.log(f(5,3));
+
+        let b = 25;
+        b += f(10,5);
+        console.log(b);
+    </script>
+</body>
+</html>

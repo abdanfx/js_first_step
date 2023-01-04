@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme</title>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    const btn = document.querySelector('button');
+    const text = document.querySelector('.textUpdate');
+
+    btn.addEventListener("click", changeTheme);
+
+    function changeTheme() {        
+
+        if (btn.textContent === "Dark Mode") {
+            let themeDisplay = document.body;
+            themeDisplay.style.backgroundColor = "black";
+            themeDisplay.style.color = "white";
+            btn.textContent = 'Light Mode';
+            text.textContent = 'The Theme Mode is Dark Mode';
+        }
+        else if (btn.textContent === "Light Mode") {
+            let themeDisplay = document.body;
+            themeDisplay.style.backgroundColor = "white";
+            themeDisplay.style.color = "black";
+            btn.textContent = 'Dark Mode';
+            text.textContent = 'The Theme Mode is Light Mode';
+        }
+    }
+
+    });
+</script>
+</head>
+<!-- <style>
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+    .light-mode {
+        background-color: white;
+        color: black;
+    }
+</style> -->
+
+<body>
+    <h1>Toggle Dark Mode or Light Mode</h1>
+    <button>Dark Mode</button>
+    <p class="textUpdate">The Theme Mode is Light Mode</p>
+</body>
+</html>

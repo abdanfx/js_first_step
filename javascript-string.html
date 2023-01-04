@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling String in JavaScript</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // alert('DOM Fully loaded and parsed!');
+            const myString = 'The revolution will \'not\"\" be televised';
+            console.log(myString);
+
+            const myNumber = 1500;
+            console.log(typeof myNumber);
+            console.log(myNumber);
+            
+            
+            // convert number to string
+            const convertToString = String(myNumber);
+            console.log(typeof convertToString);
+            console.log(convertToString);
+
+
+            // about objcet and access its property
+            const objectString = new String(myNumber);            
+            const firstProp = '0';
+            const secondProp = '1';
+            console.log(typeof objectString);
+            console.log(objectString[firstProp]);
+            console.log(objectString[secondProp]);
+
+            // join string / backtick character which be called template literal
+            const stringOne = `Hello, `;
+            const stringTwo = `How are you ?`;
+            const greetingEnglish = `${stringOne} ${stringTwo}`;
+            console.log(greetingEnglish);
+
+            const btn = document.querySelector(".askName");
+            btn.addEventListener('click', askVisitorName);
+
+            const showName = document.querySelector(".showName");
+
+            function askVisitorName(name) {
+                name = window.prompt("What is your name ?", "Bot User");
+                if (name === null) {
+                    showName.textContent = '';
+                } else {
+                    alert(`Hi ${name}, nice to meet you!`);
+                    showName.textContent = `Welcome ${name}! Your adventure begin here.`;
+                }
+            }
+            
+
+        });
+    </script>
+</head>
+<body>
+    <h1>The Fried Chicken resturant!</h1>
+    <button class="askName">Press this button</button>
+    <h1 class="showName"></h1>
+</body>
+</html>

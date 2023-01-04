@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array Javascript</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Creating an Array
+                const shopList = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+                console.log(shopList);
+                // Finding the length of an Array
+                console.log(shopList.length);
+                // Modify Array
+                shopList[0] = "Batagor";
+                console.log(shopList);
+                // Array Inside Array
+                const random = ['tree', 795, ['Zero', 1, 2]];
+                console.log(random[2][1]);
+                console.log('Limiter');
+                // Finding items in an array
+                const array = [2, 9, 9];
+                console.log(array.indexOf(2));     // 0
+                console.log(array.indexOf(7));     // -1
+                console.log(array.indexOf(9, 2));  // 2
+                console.log(array.indexOf(2, -1)); // -1
+                console.log(array.indexOf(2, -3)); // 0
+                // Adding Item in array
+                // shopList.push('Burger');
+                const newLength = shopList.push('Burger');
+                console.log(newLength);
+                // Add Item from the start
+                shopList.unshift('Fried Chicken');
+                console.log(shopList);
+                // Removing the last Item from the Array
+                shopList.pop();
+                console.log(shopList);
+                // Remove the first Item from the Array
+                shopList.shift();
+                console.log(shopList);
+                // Remove an Item based on Index
+                // Delete Batagor item from the array
+                const deleteIndex = shopList.indexOf('Batagor');
+                if (deleteIndex != -1) {
+                    shopList.splice(deleteIndex, 1);
+                }
+                console.log(shopList);
+
+
+
+            });
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
